@@ -1,0 +1,614 @@
+/* Security-focused resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  overflow-x: hidden; /* Added for security */
+}
+
+/* Your original header CSS */
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-section {
+  background-color: rgb(108, 108, 103);
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+  padding-right: 50px;
+}
+
+.extras a {
+  margin-left: 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.extras a:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 30px;
+}
+
+.logo h1 {
+  color: #003366;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav ul li {
+  margin-right: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+.nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 14px;
+  transition: width 0.3s ease;
+  border-top: white;
+  border-left: white;
+  border-right: white;
+  width: 150px;
+  position: relative;
+}
+
+.search.expanded {
+  width: 300px;
+  border: 1px solid white;
+}
+
+.icons i {
+  margin-left: 15px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  background-color: rgba(250, 247, 247, 0.8);
+  color:black;
+  width: 30%;
+  transition: right 0.3s ease-in-out;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.hamburger-menu.active {
+  right: 0;
+}
+
+.hamburger-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hamburger-menu ul li {
+  margin: 20px 0;
+}
+
+.hamburger-menu ul li a {
+  text-decoration: none;
+  color: rgb(17, 16, 16);
+  font-size: 18px;
+}
+
+.hamburger-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+.hamburger-menu .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 995px) {
+  .top-section {
+      display: none;
+  }
+
+  .nav {
+      display: none;
+  }
+
+  .hamburger-menu {
+      width: 100%;
+  }
+
+}
+
+          /* Existing styles remain unchanged */
+
+  /* Fullscreen search box - hidden by default */
+  .fullscreen-search {
+      position: fixed;
+      top: -60px;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: white;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      transition: top 0.3s ease-in-out;
+  }
+
+  .fullscreen-search.active {
+      top: 0;
+  }
+
+  .fullscreen-search input {
+      width: 90%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+  }
+
+  @media (min-width: 996px) {
+      .fullscreen-search {
+          display: none;
+      }
+  }
+
+
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: Auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Custom Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black; /* Arrow color */
+  font-size: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Change the color */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #eee;
+  color: #000;
+}
+
+/* Custom position adjustment */
+.swiper-button-next {
+  right: 15px;
+}
+
+.swiper-button-prev {
+  left: 15px;
+}
+
+/* Remove default arrow styles from Swiper */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* hide first and show second images in first swiper */
+.main img:first-of-type {
+  display: block;
+}
+
+.main img:last-of-type {
+  display: none;
+}
+
+/* Media query: Swap images when the width is below 770px */
+@media (max-width: 770px) {
+  .main img:first-of-type {
+    display: none;
+  }
+
+  .main img:last-of-type {
+    display: block;
+  }
+}
+
+/* Second Image Section - Larger Second Image on Mobile */
+#second-image-section img:first-of-type {
+  display: block;
+  width: 100%;
+}
+
+#second-image-section img:last-of-type {
+  display: none;
+}
+
+@media (max-width: 770px) {
+  #second-image-section img:first-of-type {
+    display: none;
+  }
+
+  #second-image-section img:last-of-type {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+.second-swiper {
+  width: 100%; /* Make the swiper take full width */
+  height: auto; /* Set height as 50% of viewport height */
+}
+
+.swiper-slider {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure the slide takes full height */
+}
+
+.swiper-slider img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* fourth slider */
+.swiper-img {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .swiper-slide-active .swiper-img {
+    opacity: 1;
+  }
+
+
+/* Product cart CSS */
+
+#drop-swiper-container {
+  width: 90%;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+#drop-swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#drop-swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+}
+
+#drop-swiper-slide .image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Ensures square aspect ratio */
+  background-color: #d8d7d7;
+  overflow: hidden;
+}
+
+#drop-swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#drop-swiper-slide img.img2 {
+  opacity: 0;
+}
+
+#drop-swiper-slide .image-container:hover img.img1 {
+  opacity: 0;
+}
+
+#drop-swiper-slide .image-container:hover img.img2 {
+  opacity: 1;
+}
+
+#drop-swiper-slide .product-name,
+#drop-product-name {
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+#drop-swiper-slide .product-price,
+#drop-product-price {
+  color: rgb(0, 0, 0);
+  margin: 10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+@media (max-width: 1024px) {
+  #drop-swiper-slide {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  #drop-swiper-slide {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #drop-swiper-slide {
+    font-size: 12px;
+  }
+}
+
+
+
+
+/* category container */
+
+#category-swiper-container {
+  width: 90%;
+  height: auto;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+
+/* Swiper Wrapper */
+#category-swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* Category Card */
+.category-card {
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures content stays inside the card */
+}
+
+/* Category Name */
+.category-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #003366;
+  margin: 20px;
+}
+
+/* Category About */
+.category-about {
+  font-size: 10px;
+  margin: 10px;
+  color: #090909;
+}
+
+/* Category Image */
+.category-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect: Zoom In */
+.category-card:hover .category-image {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
+/* Optional: Hover Effect: Zoom Out */
+.category-card:hover {
+  transform: scale(0.98); /* Slight zoom out for the card */
+  transition: transform 0.3s ease-in-out;
+}
+
+.headings{
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 50px;
+
+}
+.btn-primary{
+  background-color: #aab4bf;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  color: #003366;
+
+}
+
+.category-price{
+  font-size: 18px;
+  color: #130f18;
+}
+
+
+
+/* footer CSS */
+/* General Footer Styles */
+footer {
+  background-color: #f8f9fb;
+  color: #333;
+  font-family: Arial, sans-serif;
+  padding: 50px 0;
+}
+
+.footer-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Footer Links Section */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #7b4040;
+  font-size: 14px;
+}
+
+.footer-column a:hover {
+  color: #000;
+}
+
+/* Social Media Icons */
+.social-icons a {
+  color: #6fda54; /* Default icon color */
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f154cc; /* Change color on hover */
+}
+
+/* Policies Section */
+.footer-policies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.footer-policies a {
+  text-decoration: none;
+  color: #666;
+  font-size: 12px;
+}
+
+.footer-policies a:hover {
+  color: #000;
+}
+
+/* E-Waste Notice */
+.footer-note {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.footer-note a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.footer-note a:hover {
+  text-decoration: underline;
+}
+
+/* Copyright */
+.footer-copyright p {
+  font-size: 12px;
+  color: #888;
+  margin: 10px 0 0;
+}
