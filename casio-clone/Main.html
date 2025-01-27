@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Casio.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+ 
+ 
+ 
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src * data: blob:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+ 
+ 
+ 
+ 
+ 
+ 
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Demo styles -->
+
+  
+
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="top-section">
+        <div class="extras">
+            <a href="Casio_Support.html">Support</a>
+            <a href="#">Corporate</a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="logo">
+            <a href=""><img src="casio-watch-brand-logo-closeup-600nw-2478394235.webp" alt="" style="width: 60px; height: auto;"></a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#" class="nav-links">Watches</a></li>
+                <li><a href="#" class="nav-links">Electronic Musical Instruments</a></li>
+                <li><a href="#" class="nav-links">Calculators</a></li>
+                <li><a href="#" class="nav-links">Label Printers & Tapes</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+                <!-- Fullscreen Search Box -->
+                <div class="fullscreen-search" id="fullscreenSearch">
+                  <input type="text" placeholder="Search..." id="fullscreenSearchInput">
+              </div>          
+            <input type="text" id="searchBox" class="search" placeholder="Search...">
+            <i class="fas fa-search"></i>
+            <a href="#"></a><i class="fas fa-heart"></i></a>
+            <i class="fas fa-bars" id="hamburgerIcon"></i>
+        </div>
+    </div>
+</header>
+
+<div class="hamburger-menu" id="hamburgerMenu">
+    <i class="fa-solid fa-xmark close-btn" id="closeMenu"></i>
+    <ul>
+        <li><a href="#">Watches</a></li>
+        <li><a href="#">Electronic Musical Instruments</a></li>
+        <li><a href="#">Calculators</a></li>
+        <li><a href="#">Label Printers & Tapes</a></li>
+        <li><a href="Support/Casio_Support.html">Support</a></li>
+        <li><a href="#">Corporate</a></li>
+    </ul>
+</div>
+
+<div class="main">
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_copy_203272445/item_1724928517362_c_1456412365.casiocoreimg.jpeg/1729159276751/vk-casio-homepage-1920x816-vk.jpeg" alt="Casio Desktop">
+        <img src="https://gshock.casio.com/content/casio/locales/in/en/brands/gshock/products/analog-digital/110/gm-110/_jcr_content/root/responsivegrid/container_31032378_c/teaser_960537163/spImage.casiocoreimg.jpeg/1728646005156/vk-750x1126-casio-mobile-vk.jpeg" alt="Casio Mobile">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_copy_203272445/item_1724928517362_c_1204472198.casiocoreimg.jpeg/1729159285758/casio-homepage-1920x816-sg-1.jpeg" alt="">
+        <img src="https://gshock.casio.com/content/casio/locales/in/en/brands/gshock/products/analog-digital/gbm-2100/_jcr_content/root/responsivegrid/container_copy_78353/container_2106131580/carousel/item_1728643889882/spImage.casiocoreimg.jpeg/1728643930902/750x1126-casio-mobile-sg.jpeg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_copy_203272445/item_1724928517362.casiocoreimg.jpeg/1727250253720/pl-sep24-gbm-2100rh-1920x816.jpeg" alt="">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_copy_203272445/item_1724928517362/spImage.casiocoreimg.jpeg/1727250253720/pl-sep24-gbm-2100rh-750x1126.jpeg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_copy_203272445/item_1721998825425.casiocoreimg.jpeg/1727414756860/pl-sep24-gm-700-series--1920x816.jpeg" alt="">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_copy_203272445/item_1721998825425/spImage.casiocoreimg.jpeg/1727414756860/pl-sep24-gm-700-series-750x1126.jpeg" alt="">
+      </div>
+    </div>
+    <div class="swiper-button-next" id="next"></div>
+    <div class="swiper-button-prev" id="prev"></div>
+  </div>
+
+  <!-- Second Image Section -->
+  <div id="second-image-section">
+    <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/image.casiocoreimg.gif/1732596119875/almostgodsgifbanner-ezgif.com-cut.gif" alt="">
+    <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/image/spImage.casiocoreimg.gif/1732596119875/agxggifbanner-ezgif.com-optimize.gif" alt="">
+  </div>
+
+  <!-- Second Swiper -->
+  <div class="swiper mySwiper" class="second-swiper">
+    <div class="swiper-wrapper" class="swiper-w">
+      <div class="swiper-slide" class="swiper-slider">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel/item_1708923982946.casiocoreimg.jpeg/1719208879268/50th-banner-pc.jpeg" alt="Casio Desktop" style="display: block; z-index: 0;" id="swiper-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel/item_1719572395869.casiocoreimg.jpeg/1719572539034/cic-1920x816.jpeg" style="display: block;" alt="" id="swiper-img" >
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+
+  <!-- Third Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        
+        <a href="product_sort.html">
+          <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_198898620_c/teaser_copy.casiocoreimg.jpeg/1733476155880/casio-1920x816-casio.jpeg" alt="">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_198898620_c/teaser_copy/spImage.casiocoreimg.jpeg/1733476155880/casio-750x1126-casio.jpeg" alt="">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="product_sort.html">
+          <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_198898620_c/item_1714469240913.casiocoreimg.jpeg/1732594960300/casio.com-vintage-banner.jpeg" alt="">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_198898620_c/item_1714469240913/spImage.casiocoreimg.jpeg/1732594960300/casio-vintage-750x1126.jpeg" alt="">
+        </a>
+      </div>
+      <div class="swiper-slide">
+       <a href="product_sort.html">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_198898620_c/item_1714469225954.casiocoreimg.jpeg/1714469595333/g-shock-home-page-banner-1920x816.jpeg" alt="">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_198898620_c/item_1714469225954/spImage.casiocoreimg.jpeg/1714469595333/g-shock-home-page-banner-750x1126.jpeg" alt="">
+       </a>
+      </div>
+      <div class="swiper-slide">
+          <a href="product_sort.html">
+            <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_198898620_c/item_1714469224124.casiocoreimg.jpeg/1714469560651/wedding-microsite1920x816.jpeg" alt="">
+            <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_198898620_c/item_1714469224124/spImage.casiocoreimg.jpeg/1714469560651/wedding-microsite750x1126.jpeg" alt="">
+          </a>
+      </div>
+    </div>
+    <div class="swiper-button-next" id="next"></div>
+    <div class="swiper-button-prev" id="prev"></div>
+  </div>
+
+
+  <!-- fourth swiper -->
+  <div class="swiper mySwiper" class="second-swiper">
+    <div class="swiper-wrapper" class="swiper-w">
+      <div class="swiper-slide" class="second-swiper-slider">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_1090390670/item_1716453153747.casiocoreimg.jpeg/1716869444901/casio-onetone-web-1920pxx816px.jpeg" alt="Casio Desktop" style="display: block; z-index: 0;" class="swiper-img">
+      </div>
+      <div class="swiper-slide" class="swiper-slider">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_1090390670/item_1717741866196.casiocoreimg.jpeg/1733476136371/casio-digital-ae-1200whd-1920x816.jpeg" style="display: block;" alt="" class="swiper-img" >
+      </div>
+      <div class="swiper-slide" class="swiper-slider">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_1090390670/item_1716453155641.casiocoreimg.jpeg/1716869463101/ecb-2000dc-1adf-casio-bannerdesktop.jpeg" alt="Casio Desktop" style="display: block; z-index: 0;" class="swiper-img">
+      </div>
+      <div class="swiper-slide" class="swiper-slider">
+        <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/carousel_1090390670/item_1717741866196.casiocoreimg.jpeg/1733476136371/casio-digital-ae-1200whd-1920x816.jpeg" style="display: block;" alt="" class="swiper-img" >
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+
+    <!-- Third Image Section -->
+    <div id="second-image-section">
+      <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/teaser_553479698.casiocoreimg.jpeg/1721968428339/desktop-home-page-scroll-1920x816.jpeg" alt="">
+      <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/teaser_553479698/spImage.casiocoreimg.jpeg/1721968428339/mobile-home-page-scroll-750x1126.jpeg" alt="">
+    </div>
+
+    <!-- fourth Image Section -->
+    <div id="second-image-section">
+      <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/teaser_1897153092.casiocoreimg.jpeg/1691986502988/privia-casio-banner.jpeg" alt="">
+      <img src="https://www.casio.com/content/casio/locales/in/en/products/_jcr_content/root/responsivegrid/teaser_1897153092/spImage.casiocoreimg.jpeg/1691986502988/750x422-mobile-banner-privia.jpeg" alt="">
+  </div>
+</div>
+
+    <div class="headings">
+      <h1>NEW DROPS</h1>
+    </div>
+    
+      <!-- Swiper -->
+      <!-- Drop Section -->
+    <div class="swiper" id="drop-swiper-container">
+      <div class="swiper-wrapper" id="drop-swiper-wrapper"></div>
+      <div class="swiper-button-next" id="drop-swiper-button-next"></div>
+      <div class="swiper-button-prev" id="drop-swiper-button-prev"></div>
+    </div>
+
+  <div class="headings">
+    <h1>TOPICS</h1>
+  </div>
+
+
+   <!-- Category Section -->
+  <div class="category"></div>
+    <div class="swiper" id="drop-swiper-container">
+      <div class="swiper-wrapper" id="category-swiper-wrapper"></div>
+      <div class="swiper-button-next" id="category-swiper-button-next"></div>
+      <div class="swiper-button-prev" id="category-swiper-button-prev"></div>
+    </div>
+  </div>
+
+
+
+      <!-- Footer Section -->
+      <footer>
+        <div class="footer-container">
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <a href="#">Products</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Support</h3>
+                    <a href="support/Casio_Support.html">Support</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Corporate</h3>
+                    <a href="#">Corporate</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Warranty</h3>
+                    <a href="#">Warranty</a>
+                </div>
+            </div>
+            <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          />
+          <div class="social-icons">
+              <a href="#" target="_blank" aria-label="Facebook">
+                  <i class="fab fa-facebook fa-2x"></i>
+              </a>
+              <a href="#" target="_blank" aria-label="Instagram">
+                  <i class="fab fa-instagram fa-2x"></i>
+              </a>
+              <a href="#" target="_blank" aria-label="YouTube">
+                  <i class="fab fa-youtube fa-2x"></i>
+              </a>
+              <a href="#" target="_blank" aria-label="Twitter">
+                  <i class="fab fa-twitter fa-2x"></i>
+              </a>
+              <a href="#" target="_blank" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin fa-2x"></i>
+              </a>
+          </div>
+           
+            <!-- Footer Policies -->
+            <div class="footer-policies">
+                <a href="https://www.casio.com/in/privacy/">Privacy Policy</a>
+                <a href="https://www.casio.com/in/labour_compliance/">Labour Compliance</a>
+                <a href="https://www.casio.com/content/dam/casio/local/in/secretarial/secretarial-redirect/MGT-7_.pdf">Secretarial (redirect)</a>
+                <a href="https://www.casio.com/content/dam/casio/local/in/secretarial/csr/CSR-Policy-V2.pdf">CSR Policy</a>
+                <a href="https://www.casio.com/in/cookie/">Cookie Policy</a>
+                <a href="https://www.casio.com/in/terms/">Terms of Use</a>
+                <a href="https://www.casio.com/in/sitemap/">Sitemap</a>
+                <a href="https://www.casio-intl.com/in/en/support/contact/">Contact Us</a>
+                <a href="https://www.casio.com/select-country-region/">India</a>
+            </div>
+
+            <!-- E-Waste Notice -->
+            <div class="footer-note">
+                <p>
+                    Please help us recycle e-waste and plastic waste responsibly.  
+                    For more information or e-waste pick up, please call <strong>1800 2022746</strong> or 
+                    <a href="https://www.casio.com/content/dam/casio/local/in/products/label/product-disposal-guidelines/Product_Disposal_Guidelines_Casio_202212.pdf">click here</a> for more details.
+                </p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-copyright">
+                <p>&copy; 2024 Casio India Co., Pvt. Ltd.</p>
+            </div>
+        </div>
+    </footer>
+
+
+   <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+
+</html>
+
+
+
+
+
+
+

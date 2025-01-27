@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src * data: blob:;"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <title>Casio Watch Filter and Pagination</title>
+    <link rel="stylesheet" href="product_sort.css" />
+  </head>
+
+  <body>
+    <div class="top-navigation">
+      <div class="nav-links">
+        <a href="#" class="active">BEST SELLERS</a>
+        <a href="#">New Drops</a>
+        <a href="#">FULL METAL</a>
+        <a href="#">G-STEEL</a>
+        <a href="#">MT-G</a>
+        <a href="#">G-SQUAD</a>
+        <a href="#">MASTER OF G</a>
+        <a href="#">ANALOG-DIGITAL</a>
+        <a href="#">DIGITAL</a>
+        <a href="#">LIMITED</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="item-count">30 items</div>
+
+      <main>
+        <aside class="filters">
+          <div class="filter-section">
+            <h3>Sort</h3>
+            <div class="radio-group">
+              <label
+                ><input type="radio" name="sort" value="newest" /> Newest</label
+              >
+              <label
+                ><input type="radio" name="sort" value="price-high-low" />
+                Price:High-Low</label
+              >
+              <label
+                ><input type="radio" name="sort" value="price-low-high" />
+                Price:Low-High</label
+              >
+              <label
+                ><input type="radio" name="sort" value="weight-heavy-light" />
+                Weight:Heavy-Light</label
+              >
+              <label
+                ><input type="radio" name="sort" value="weight-light-heavy" />
+                Weight:Light-Heavy</label
+              >
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <h3>Price Range</h3>
+            <div class="checkbox-group">
+              <label
+                ><input type="checkbox" value="below-5000" /> Below ₹5000
+                <span>(0)</span></label
+              >
+              <label
+                ><input type="checkbox" value="5000-10000" /> ₹5000 - ₹10000
+                <span>(17)</span></label
+              >
+              <label
+                ><input type="checkbox" value="10000-20000" /> ₹10000 - ₹20000
+                <span>(31)</span></label
+              >
+              <label
+                ><input type="checkbox" value="20000-30000" /> ₹20000 - ₹30000
+                <span>(1)</span></label
+              >
+              <label
+                ><input type="checkbox" value="30000-40000" /> ₹30000 - ₹40000
+                <span>(1)</span></label
+              >
+              <label
+                ><input type="checkbox" value="40000-50000" /> ₹40000 - ₹50000
+                <span>(0)</span></label
+              >
+              <label
+                ><input type="checkbox" value="above-50000" /> Above ₹50000
+                <span>(0)</span></label
+              >
+            </div>
+          </div>
+        </aside>
+
+        <div class="products-grid" id="watchesList">
+          <!-- Loading indicator -->
+          <div class="loading-indicator" id="loadingIndicator">Loading...</div>
+        </div>
+      </main>
+    </div>
+
+    <div id="quickViewModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+    <script>
+      "use strict";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyBERuOH-3GvNnYxWSHMMKgBk0hRQ4D5O-U",
+        authDomain: "casio-product-sort-page.firebaseapp.com",
+        databaseURL:
+          "https://casio-product-sort-page-default-rtdb.firebaseio.com",
+        projectId: "casio-product-sort-page",
+        storageBucket: "casio-product-sort-page.firebasestorage.app",
+        messagingSenderId: "952840620124",
+        appId: "1:952840620124:web:7e6bb7245330c5f4463e99",
+        
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      const database = firebase.database();
+      
+
+      let watches = [];
+      let currentPage = 1;
+      const watchesPerPage = 6;
+
+      function fetchWatchesFromDatabase() {
+        const loadingIndicator = document.getElementById("loadingIndicator");
+        loadingIndicator.style.display = "block";
+
+        const watchesRef = database.ref("watches");
+        watchesRef
+          .once("value")
+          .then((snapshot) => {
+            if (snapshot.exists()) {
+              watches = Object.values(snapshot.val());
+              displayWatches(watches);
+            } else {
+              document.getElementById("watchesList").innerHTML =
+                "<p>No watches found</p>";
+            }
+          })
+          .catch((error) => {
+            console.error("Error fetching watches:", error);
+            document.getElementById("watchesList").innerHTML =
+              "<p>Error loading watches. Please try again later.</p>";
+          })
+          .finally(() => {
+            loadingIndicator.style.display = "none";
+          });
+      }
+
+      function displayWatches(filteredWatches) {
+        const watchesList = document.getElementById("watchesList");
+        watchesList.innerHTML = "";
+
+        if (!filteredWatches || filteredWatches.length === 0) {
+          watchesList.innerHTML = "<p>No watches found</p>";
+          return;
+        }
+
+        const startIndex = (currentPage - 1) * watchesPerPage;
+        const endIndex = startIndex + watchesPerPage;
+        const pageWatches = filteredWatches.slice(startIndex, endIndex);
+
+        pageWatches.forEach((watch) => {
+          const watchElement = document.createElement("div");
+          watchElement.className = "watch-card";
+
+          const wishlistIcon = document.createElement("div");
+          wishlistIcon.className = "wishlist-icon";
+          wishlistIcon.innerHTML = "♡";
+
+          const imageElement = document.createElement("div");
+          imageElement.className = "image-container";
+          const img = document.createElement("img");
+          img.src = watch.image;
+          img.alt = watch.code;
+          img.onerror = function () {
+            this.src = "placeholder.jpg"; // Add a placeholder image
+          };
+          imageElement.appendChild(img);
+
+          const brandElement = document.createElement("p");
+          brandElement.className = "brand";
+          brandElement.textContent = "G-SHOCK";
+
+          const codeElement = document.createElement("p");
+          codeElement.className = "code";
+          codeElement.textContent = watch.code;
+
+          const priceElement = document.createElement("p");
+          priceElement.className = "price";
+          priceElement.textContent = `₹${watch.price} (Incl. of all taxes)`;
+
+          const buyButton = document.createElement("button");
+          buyButton.className = "buy-now";
+          buyButton.textContent = "Buy Now";
+          buyButton.addEventListener("click", () => {
+            try {
+              saveToCart(watch);
+              window.location.href = "checkout.html";
+            } catch (error) {
+              console.error("Error during purchase:", error);
+              alert(
+                "There was an error processing your purchase. Please try again."
+              );
+            }
+          });
+
+          watchElement.appendChild(wishlistIcon);
+          watchElement.appendChild(imageElement);
+          watchElement.appendChild(brandElement);
+          watchElement.appendChild(codeElement);
+          watchElement.appendChild(priceElement);
+          watchElement.appendChild(buyButton);
+
+          watchesList.appendChild(watchElement);
+        });
+      }
+
+      function saveToCart(watch) {
+        try {
+          let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+          cartItems.push({
+            code: watch.code,
+            price: watch.price,
+            image: watch.image,
+            brand: "G-SHOCK",
+            quantity: 1,
+          });
+          localStorage.setItem("cart", JSON.stringify(cartItems));
+        } catch (error) {
+          console.error("Error saving to cart:", error);
+          throw new Error("Failed to save to cart");
+        }
+      }
+
+      function sortWatches(sortOption) {
+        try {
+          switch (sortOption) {
+            case "newest":
+              watches.sort((a, b) => new Date(b.date) - new Date(a.date));
+              break;
+            case "price-high-low":
+              watches.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+              break;
+            case "price-low-high":
+              watches.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+              break;
+          }
+          displayWatches(watches);
+        } catch (error) {
+          console.error("Error sorting watches:", error);
+        }
+      }
+
+      function filterWatches() {
+        try {
+          const checkedPriceRanges = Array.from(
+            document.querySelectorAll(
+              '.checkbox-group input[type="checkbox"]:checked'
+            )
+          ).map((checkbox) => checkbox.value);
+
+          if (checkedPriceRanges.length === 0) {
+            displayWatches(watches);
+            return;
+          }
+
+          const filteredWatches = watches.filter((watch) => {
+            const price = parseFloat(watch.price);
+            return checkedPriceRanges.some((range) => {
+              const [min, max] = range.split("-").map((val) => {
+                if (val === "below") return 0;
+                if (val === "above") return Infinity;
+                return parseFloat(val);
+              });
+              return price >= min && price <= max;
+            });
+          });
+
+          displayWatches(filteredWatches);
+        } catch (error) {
+          console.error("Error filtering watches:", error);
+        }
+      }
+
+      // Event Listeners
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .querySelectorAll('.radio-group input[type="radio"]')
+          .forEach((radio) => {
+            radio.addEventListener("change", (e) =>
+              sortWatches(e.target.value)
+            );
+          });
+
+        document
+          .querySelectorAll('.checkbox-group input[type="checkbox"]')
+          .forEach((checkbox) => {
+            checkbox.addEventListener("change", filterWatches);
+          });
+
+        fetchWatchesFromDatabase();
+      });
+    </script>
+
+    <noscript>
+      <div class="error-message">
+        Please enable JavaScript to use this application.
+      </div>
+    </noscript>
+  </body>
+</html>

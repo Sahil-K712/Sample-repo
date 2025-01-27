@@ -1,0 +1,124 @@
+{
+  "watches": {
+    "001": {
+      "brand": "G-SHOCK",
+      "code": "GA-2100AG24-1A1",
+      "price": "12,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GA/GA2/ga-2100ag24-1a1/assets/GA-2100AG24-1A1-Seq1.png.transform/main-visual-pc/image.png"
+    },
+    "002": {
+      "brand": "G-SHOCK",
+      "code": "DW-5600PK-1",
+      "price": "7,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/D/DW/DW5/dw-5600pk-1/assets/DW-5600PK-1.png.transform/main-visual-pc/image.png"
+    },
+    "003": {
+      "brand": "G-SHOCK",
+      "code": "GM-700-1A",
+      "price": "15,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GM/gm7/gm-700-1a/assets/GM-700-1A.png.transform/main-visual-pc/image.png"
+    },
+    "004": {
+      "brand": "G-SHOCK",
+      "code": "GM-700G-9A",
+      "price": "16,495",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GM/gm7/gm-700g-9a/assets/GM-700G-9A.png.transform/main-visual-pc/image.png"
+    },
+    "005": {
+      "brand": "G-SHOCK",
+      "code": "GBM-2100RH-1A",
+      "price": "29,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GA/GA2/ga-2100ag24-1a1/assets/GA-2100AG24-1A1-Seq1.png.transform/main-visual-pc/image.png"
+    },
+    "006": {
+      "brand": "EDIFICE",
+      "code": "EFV-640D-2BV",
+      "price": "8,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/E/EF/EFV/efv-640d-2bv/assets/EFV-640D-2BV.png.transform/main-visual-pc/image.png"
+    },
+    "007": {
+      "brand": "EDIFICE",
+      "code": "EFV-640D-3AV",
+      "price": "8,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/E/EF/EFV/efv-640d-3av/assets/EFV-640D-3AV.png.transform/main-visual-pc/image.png"
+    },
+    "008": {
+      "brand": "EDIFICE",
+      "code": "EFV-640DC-1AV",
+      "price": "11,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/E/EF/EFV/efv-640dc-1av/assets/EFV-640DC-1AVU.png.transform/main-visual-pc/image.png"
+    },
+    "009": {
+      "brand": "CASIO",
+      "code": "MTP-1302PGC-3AV",
+      "price": "5,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/M/MT/MTP/mtp-1302pgc-3av/assets/MTP-1302PGC-3AV.png.transform/main-visual-pc/image.png"
+    },
+    "010": {
+      "brand": "CASIO",
+      "code": "MTP-1302PGC-5AV",
+      "price": "5,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GA/GA2/ga-2100ag24-1a1/assets/GA-2100AG24-1A1-Seq1.png.transform/main-visual-pc/image.png"
+    },
+    "011": {
+      "brand": "CASIO",
+      "code": "ABL-100WEGG-1B",
+      "price": "7,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/A/ab/abl/abl-100wegg-1b/assets/ABL-100WEGG-1B.png.transform/main-visual-pc/image.png"
+    },
+    "012": {
+      "brand": "CASIO",
+      "code": "ABL-100WE-1A",
+      "price": "7,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/A/ab/abl/abl-100we-1a/assets/ABL-100WE-1A.png.transform/main-visual-pc/image.png"
+    },
+    "013": {
+      "brand": "CASIO",
+      "code": "ABL-100WE-1B",
+      "price": "5,495",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/A/ab/abl/abl-100we-1b/assets/ABL-100WE-1B.png.transform/main-visual-pc/image.png"
+    },
+    "014": {
+      "brand": "CASIO",
+      "code": "ABL-100WEG-9A",
+      "price": "8,495",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/A/ab/abl/abl-100weg-9a/assets/ABL-100WEG-9A.png.transform/main-visual-pc/image.png"
+    },
+    "015": {
+      "brand": "G-SHOCK",
+      "code": "GM-700P-6A",
+      "price": "16,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GM/gm7/gm-700p-6a/assets/GM-700P-6A.png.transform/main-visual-pc/image.png"
+    },
+    "016": {
+      "brand": "SHEEN",
+      "code": "SHE-4554GY-5A",
+      "price": "10,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/S/SH/SHE/she-4554gy-5a/assets/SHE-4554GY-5AU.png.transform/main-visual-pc/image.png"
+    },
+    "017": {
+      "brand": "G-SHOCK",
+      "code": "GBM-2100A-1A2",
+      "price": "19,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GB/gbm/gbm-2100a-1a2/assets/GBM-2100A-1A2.png.transform/main-visual-pc/image.png"
+    },
+    "018": {
+      "brand": "EDIFICE",
+      "code": "EFB-730D-2AV",
+      "price": "11,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/E/EF/EFB/efb-730d-2av/assets/EFB-730D-2AV.png.transform/main-visual-pc/image.png"
+    },
+    "019": {
+      "brand": "G-SHOCK",
+      "code": "GA-2100AG24-1A1",
+      "price": " 12,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GA/GA2/ga-2100ag24-1a1/assets/GA-2100AG24-1A1-Seq1.png.transform/main-visual-pc/image.png"
+    },
+    "020": {
+      "brand": "G-SHOCK",
+      "code": "GMD-B300-1",
+      "price": "7,995",
+      "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GM/GMD/gmd-b300-1/assets/GMD-B300-1.png.transform/main-visual-pc/image.png"
+    }
+  }
+}

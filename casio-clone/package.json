@@ -1,0 +1,13 @@
+{
+  "name": "casio-clone",
+  "version": "1.0.0",
+  "description": "This project is part of the construct week, where we are creating a CASIO WEBSITE CLONE using only **HTML**, **CSS**, **JavaScript** and some backend like **Node.js**, **Firebase**. The project is spread across four days, with clear tasks assigned to each team member. Below is a detailed breakdown of tasks and responsibilities.",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "CheckoutScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": []
+}
